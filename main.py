@@ -3,7 +3,7 @@ from fastapi import FastAPI, Request
 import httpx
 
 app = FastAPI()
-GROQ_API_URL = 'https://api.groq.com/openai/v1'  # 替换为 Groq API 的实际端点
+GROQ_API_URL = 'https://api.groq.com/openai'  # 替换为 Groq API 的实际端点
 
 @app.api_route('/{path:path}', methods=['GET', 'POST', 'PUT', 'DELETE'])
 async def proxy(path: str, request: Request):
